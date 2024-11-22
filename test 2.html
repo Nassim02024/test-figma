@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .welcome-container {
+          background-color: #fff;
+          display: flex;
+          max-width: 480px;
+          width: 100%;
+          flex-direction: column;
+          overflow: hidden;
+          margin: 0 auto;
+        }
+      
+        .header-wrapper {
+          align-self: start;
+          display: flex;
+        }
+      
+        .logo-container {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          aspect-ratio: 0.906;
+          width: 183px;
+        }
+      
+        .logo-image {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      
+        .status-bar-container {
+          align-self: start;
+          display: flex;
+          margin: 14px 0 0;
+          flex-direction: column;
+          overflow: hidden;
+          flex-grow: 1;
+          flex-basis: 0;
+          width: fit-content;
+        }
+      
+        .status-bar-wrapper {
+          display: flex;
+          gap: 20px;
+          overflow: hidden;
+          justify-content: space-between;
+          padding: 4px 0 4px 11px;
+        }
+      
+        .time-display {
+          border-radius: 24px;
+          align-self: start;
+          display: flex;
+          flex-direction: column;
+          color: #000;
+          text-align: center;
+          letter-spacing: -0.32px;
+          padding: 2px 0;
+          font: 600 16px/1 SF Pro Text, sans-serif;
+        }
+      
+        .time-text {
+          z-index: 10;
+          margin-top: -4px;
+        }
+      
+        .status-icons {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          aspect-ratio: 5.923;
+          width: 77px;
+        }
+      
+        .status-icon {
+          aspect-ratio: 5.92;
+          object-fit: contain;
+          object-position: center;
+          width: 100%;
+        }
+      
+        .content-wrapper {
+          display: flex;
+          margin-top: 14px;
+          width: 100%;
+          padding-left: 14px;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .welcome-title {
+          color: #ef2a39;
+          text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          letter-spacing: -0.32px;
+          text-align: center;
+          font: 800 22px/1 Inter, sans-serif;
+          border: 10px solid #000;
+        }
+      
+        .promo-text {
+          border-radius: 21px;
+          background-color: #000;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          margin-top: 60px;
+          width: 100%;
+          max-width: 351px;
+          color: #fff;
+          text-align: center;
+          letter-spacing: -0.32px;
+          padding: 15px 25px;
+          font: 100 22px/27px Inter, sans-serif;
+        }
+      
+        .delivery-info {
+          border-radius: 21px;
+          background-color: #000;
+          margin-top: 44px;
+          width: 100%;
+          max-width: 352px;
+          color: #fff;
+          text-align: center;
+          letter-spacing: -0.32px;
+          padding: 18px 30px 4px;
+          font: 100 22px/28px Inter, sans-serif;
+        }
+      
+        .contact-section {
+          align-self: stretch;
+          display: flex;
+          margin-top: 167px;
+          gap: 19px;
+        }
+      
+        .phone-numbers {
+          display: flex;
+          flex-direction: column;
+          color: #000;
+          text-align: center;
+          letter-spacing: -0.32px;
+          margin: auto 0;
+          font: 300 18px/1 Inter, sans-serif;
+        }
+      
+        .phone-row {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+        }
+      
+        .phone-label {
+          align-self: stretch;
+          width: 61px;
+          margin: auto 0;
+        }
+      
+        .phone-number {
+          align-self: stretch;
+          width: 106px;
+          margin: auto 0;
+        }
+      
+        .image-section {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          aspect-ratio: 1.027;
+          width: 193px;
+          align-items: start;
+          padding: 51px 35px 0;
+        }
+      
+        .image-wrapper {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          aspect-ratio: 1.153;
+          width: 100%;
+        }
+      
+        .inner-image {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          aspect-ratio: 1.153;
+          width: 100%;
+          align-items: start;
+          padding: 19px 16px 0;
+        }
+      
+        .border-box {
+          position: relative;
+          display: flex;
+          height: 118px;
+          border: 1px solid #000;
+        }
+      
+        @media (max-width: 640px) {
+          .status-bar-wrapper {
+            display: none;
+          }
+          .status-icons {
+            display: none;
+          }
+          .inner-image {
+            display: none;
+          }
+          .content-wrapper {
+            margin-top: -4px;
+          }
+          .delivery-info {
+            padding-top: -4px;
+          }
+        }
+      </style>
+      
+      <section class="welcome-container">
+        <header class="header-wrapper">
+          <div class="logo-container">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/060009cd6d6323c12e82b0669b7532daa2dfdae9f6e81b647bc385935228e44a?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+            <div class="logo-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/060009cd6d6323c12e82b0669b7532daa2dfdae9f6e81b647bc385935228e44a?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+              <div class="logo-container">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/060009cd6d6323c12e82b0669b7532daa2dfdae9f6e81b647bc385935228e44a?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                <div class="logo-container">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/060009cd6d6323c12e82b0669b7532daa2dfdae9f6e81b647bc385935228e44a?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                  <div class="logo-container">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5329494d4814fec2a02d7f7fb1a7b016afcc7d2d9763bc852677cbd9601050e?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                    <div class="logo-container">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5329494d4814fec2a02d7f7fb1a7b016afcc7d2d9763bc852677cbd9601050e?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                      <div class="logo-container">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b5329494d4814fec2a02d7f7fb1a7b016afcc7d2d9763bc852677cbd9601050e?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                        <div class="logo-container">
+                          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fe8385603205ca56d2721f19d936e25ecfd07a06b21001434d928b34bd8fc98?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                          <div class="logo-container">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fe8385603205ca56d2721f19d936e25ecfd07a06b21001434d928b34bd8fc98?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fe8385603205ca56d2721f19d936e25ecfd07a06b21001434d928b34bd8fc98?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Logo" class="logo-image" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="status-bar-container">
+            <div class="status-bar-wrapper">
+              <div class="time-display">
+                <time class="time-text">9:41</time>
+                <time class="time-text">9:41</time>
+              </div>
+              <div class="status-icons">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d73fd07ad226b9d78d788204c83abe068a7a2e0fb8811ab185b54eb1f193d15f?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Status Icon" class="logo-image" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d73fd07ad226b9d78d788204c83abe068a7a2e0fb8811ab185b54eb1f193d15f?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Status Icon" class="status-icon" />
+              </div>
+            </div>
+          </div>
+        </header>
+      
+        <main class="content-wrapper">
+          <h1 class="welcome-title">مرحبا بك في هايبر مارش بن ساسي</h1>
+          <p class="promo-text">من خلال الشراء من الموقع ستحصل على توصيلتين مجانيتين</p>
+          <p class="delivery-info">يتم احتساب حق التوصيل 400.00 DA</p>
+      
+          <section class="contact-section">
+            <div class="phone-numbers">
+              <div class="phone-row">
+                <span class="phone-label">phon1:</span>
+                <span class="phone-number">0669010670</span>
+              </div>
+              <div class="phone-row">
+                <span class="phone-label">phon2:</span>
+                <span class="phone-number">0669010670</span>
+              </div>
+            </div>
+      
+            <div class="image-section">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b6747507d6c8b7de0b3fb8fce9e4984d34b6677699e50484b133cb5b62e68bca?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Section Image" class="logo-image" />
+              <div class="image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/842225917a0410fa79ea7b3eda6f182f7018e3cdba254081e7bb6f834f897cc1?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Section Image" class="logo-image" />
+                <div class="inner-image">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/842225917a0410fa79ea7b3eda6f182f7018e3cdba254081e7bb6f834f897cc1?placeholderIfAbsent=true&apiKey=a54d87c9a209440aaad8de7652cd7760" alt="Section Image" class="logo-image" />
+                  <div class="border-box"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </section>
+</body>
+</html>
